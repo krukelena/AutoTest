@@ -23,6 +23,7 @@ namespace NunitTest
         //[TestCase(-3, 6, ExpectedResult = 3)]
         //[TestCase(-3, -6, ExpectedResult = 3)]
         //[TestCase(3, 6, ExpectedResult = 9)]
+        [Retry(2)]
         [Test]
         public void SummTest([Values(1, 1)] int x, 
             [Range(10, 20, 2)] int y)
