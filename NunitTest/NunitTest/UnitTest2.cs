@@ -28,7 +28,7 @@ namespace NunitTest
         [TestCase(6, 5, ExpectedResult = 1)]
         [TestCase(3, 6, ExpectedResult = -3)]
         [TestCase(-3, -6, ExpectedResult = 1)]
-        [TestCase(6, 1, ExpectedResult = 5)]
+        [TestCase(6, 2, ExpectedResult = 4)]
         public int MinusTest(int x, int y)
         {
 
