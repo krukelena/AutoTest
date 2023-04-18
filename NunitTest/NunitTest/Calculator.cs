@@ -9,6 +9,5 @@
         public int Divedie(int x, int y) => x/y;
 
         public int Multiplicy(int x, int y) => x*y;
-
     }
 }

@@ -24,7 +24,7 @@ namespace NunitTest
         {
             //randomInt = new Random().Next(0, 10);
         }
-
+        [Test, Category("UnitTest2"), Description("Метод разности")]
         [TestCase(6, 5, ExpectedResult = 1)]
         [TestCase(3, 6, ExpectedResult = -3)]
         [TestCase(-3, -6, ExpectedResult = 1)]
