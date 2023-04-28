@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NunitTest_Selenium
 { /// <summary>
-  ///,* Notification Messages - кликнуть на кнопку,
+  ///.Notification Messages - кликнуть на кнопку,
   ///дождаться появления нотификации, проверить соответствие текста ожиданиям
   /// </summary>
     [TestFixture]
@@ -34,13 +34,13 @@ namespace NunitTest_Selenium
             var flashElement = ChromeDriver.FindElement(By.Id("flash"));
      
             Assert.That(flashElement.Text, Is.EqualTo("Action successful\r\n×"));
-            
         }
+
+        [TearDown]
         public void TearDown()
         {
             ChromeDriver.Quit();
         }
-
     }
 }
 

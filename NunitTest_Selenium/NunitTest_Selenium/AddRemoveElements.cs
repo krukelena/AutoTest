@@ -22,6 +22,7 @@ namespace NunitTest_Selenium
             ChromeDriver.Manage().Window.Maximize();
             ChromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
             ChromeDriver.Navigate().GoToUrl("http://the-internet.herokuapp.com/add_remove_elements/");
+
         }
 
         [Test]
@@ -42,6 +43,7 @@ namespace NunitTest_Selenium
             Assert.That(count, Is.EqualTo(1));
        
         }
+
         [TearDown]
         public void TearDown()
         {
