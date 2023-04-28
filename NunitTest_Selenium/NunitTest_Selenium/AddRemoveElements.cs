@@ -4,12 +4,7 @@ using System.Collections.ObjectModel;
 
 namespace NunitTest_Selenium
 {
-    /// <summary>
-    ///	Add/Remove Elements - добавить 2 элемента, удалить элемент, проверить количество элементов
-    ///	By.XPath("//button[text()='Add Element']")
-    ///	By.XPath("//button[text()='Delete']")
-    /// </summary>
-
+   
     [TestFixture]
     public class AddRemoveElements
     {
