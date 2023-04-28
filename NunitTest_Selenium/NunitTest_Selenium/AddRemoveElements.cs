@@ -5,10 +5,9 @@ using System.Collections.ObjectModel;
 namespace NunitTest_Selenium
 {
     /// <summary>
-    ///a.	Add/Remove Elements - добавить 2 элемента, удалить элемент, проверить количество элементов
-    ///    i.Локаторы xpath:
-    ///1.	By.XPath("//button[text()='Add Element']")
-    ///2.	By.XPath("//button[text()='Delete']")
+    ///	Add/Remove Elements - добавить 2 элемента, удалить элемент, проверить количество элементов
+    ///	By.XPath("//button[text()='Add Element']")
+    ///	By.XPath("//button[text()='Delete']")
     /// </summary>
 
     [TestFixture]

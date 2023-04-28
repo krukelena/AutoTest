@@ -26,6 +26,7 @@ namespace NunitTest_Selenium
             ChromeDriver.Navigate().GoToUrl("http://the-internet.herokuapp.com/inputs");
 
         }
+
         [Test]
         public void InputsTest()
         {
@@ -33,17 +34,21 @@ namespace NunitTest_Selenium
             inputElement.SendKeys(Keys.ArrowUp);
 
             var inputAttribute = inputElement.GetAttribute("value");
+            
             Assert.That(inputAttribute, Is.EqualTo("1"));
 
             for (int i = 0; i < 10; i++)
             {
                 inputElement.SendKeys(Keys.ArrowDown);
             }
+           
             Assert.That(inputAttribute, Is.EqualTo("-9"));
             
             inputElement.SendKeys("vklbndklfg&*dsd");
+           
             Assert.That(inputAttribute, Is.EqualTo("-9"));
         }
+
         [TearDown]
         public void TearDown() 
         {

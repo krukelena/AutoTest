@@ -35,12 +35,10 @@ namespace NunitTest_Selenium
      
             Assert.That(flashElement.Text, Is.EqualTo("Action successful\r\n×"));
             
-            
-
         }
         public void TearDown()
         {
-            //ChromeDriver.Quit();
+            ChromeDriver.Quit();
         }
 
     }

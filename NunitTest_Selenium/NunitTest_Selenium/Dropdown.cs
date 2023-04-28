@@ -24,7 +24,9 @@ namespace NunitTest_Selenium
             ChromeDriver.Manage().Window.Maximize();
             ChromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
             ChromeDriver.Navigate().GoToUrl("http://the-internet.herokuapp.com/dropdown");
+
         }
+
         [Test]
         public void DropDownTest()
         {
@@ -34,12 +36,16 @@ namespace NunitTest_Selenium
 
             dropdown.SelectByIndex(1);
             var selectedAttribute = dropdown.SelectedOption.GetAttribute("selected");
+            
             Assert.IsNotNull(selectedAttribute);
 
             dropdown.SelectByIndex(2);
             selectedAttribute = dropdown.SelectedOption.GetAttribute("selected");
+           
             Assert.IsNotNull(selectedAttribute);
+
         }
+
         [TearDown]
         public void TearDown()
         {

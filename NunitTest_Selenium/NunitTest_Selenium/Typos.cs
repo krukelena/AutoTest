@@ -23,12 +23,15 @@ namespace NunitTest_Selenium
             ChromeDriver.Navigate().GoToUrl("http://the-internet.herokuapp.com/typos");
 
         }
+
         [Test]
         public void TyposTest()
         {
             var typosElement = ChromeDriver.FindElements(By.TagName("p"))[1];
+            
             Assert.That(typosElement.Text, Is.EqualTo("Sometimes you'll see a typo, other times you won't."));
         }
+
         [TearDown]
         public void TearDown()
         {

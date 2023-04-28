@@ -13,7 +13,6 @@ namespace NunitTest_Selenium
     {
         WebDriver ChromeDriver { get; set; }
 
-
         [SetUp]
         public void SetUp()
         {
@@ -21,18 +20,26 @@ namespace NunitTest_Selenium
             ChromeDriver.Manage().Window.Maximize();
             ChromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
             ChromeDriver.Navigate().GoToUrl("https://the-internet.herokuapp.com/tables");
-
+        
         }
+
         [Test]
         public void SortableDataTablesTest()
         {
             var element = ChromeDriver.FindElement(By.XPath("//tbody/tr[1]/td[1]"));
+            
             Assert.That(element.Text, Is.EqualTo("Smith"));
+            
             element = ChromeDriver.FindElement(By.XPath("//tbody/tr[2]/td[1]"));
+            
             Assert.That(element.Text, Is.EqualTo("Bach"));
+            
             element = ChromeDriver.FindElement(By.XPath("//tbody/tr[4]/td[2]"));
+           
             Assert.That(element.Text, Is.EqualTo("Tim"));
         }
+
+        [TearDown]
         public void TearDown()
         {
             ChromeDriver.Quit();

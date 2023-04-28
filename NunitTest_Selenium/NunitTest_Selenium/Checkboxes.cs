@@ -22,31 +22,33 @@ namespace NunitTest_Selenium
             ChromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
             ChromeDriver.Navigate().GoToUrl("http://the-internet.herokuapp.com/checkboxes");
         }
+
         [Test]
         public void CheckBoxesTest()
         {
             var checkboxElements = ChromeDriver.FindElements(By.CssSelector("[type = checkbox]"));
-
             var firstCheckbox = checkboxElements[0];
             var secondCheckbox = checkboxElements[1];
-
             var firstCheckboxAttribute = firstCheckbox.GetAttribute("checked");
+            
             Assert.IsNull(firstCheckboxAttribute);
 
             firstCheckbox.Click();
-
             firstCheckboxAttribute = firstCheckbox.GetAttribute("checked");
+            
             Assert.IsNotNull(firstCheckboxAttribute);
 
             var secondCheckboxAttribute = secondCheckbox.GetAttribute("checked");
+            
             Assert.IsNotNull(secondCheckboxAttribute);
 
             secondCheckbox.Click();
-
             secondCheckboxAttribute = secondCheckbox.GetAttribute("checked");
+
             Assert.IsNull(secondCheckboxAttribute);
 
         }
+
         [TearDown]
         public void TearDown()
         {
