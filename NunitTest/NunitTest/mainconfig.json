@@ -1,0 +1,10 @@
+﻿{
+	"Browser": {
+		"StartUri": "StartUrl",
+		"Headless": false,
+		"TypeBrowser": "Chrome"
+	},
+	"Api": {
+
+	}
+}

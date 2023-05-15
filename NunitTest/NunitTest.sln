@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NunitTest", "NunitTest\NunitTest.csproj", "{3DA9BAB4-316C-4CF1-AB86-EEB962E617EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NunitTest", "NunitTest\NunitTest.csproj", "{3DA9BAB4-316C-4CF1-AB86-EEB962E617EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObject", "BusinessObject\BusinessObject.csproj", "{436FA483-4F3E-4707-BE08-B5F9DBCF430F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core1", "Core1\Core1.csproj", "{F509C710-6915-4774-AD70-8564B71298E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{3DA9BAB4-316C-4CF1-AB86-EEB962E617EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DA9BAB4-316C-4CF1-AB86-EEB962E617EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DA9BAB4-316C-4CF1-AB86-EEB962E617EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{436FA483-4F3E-4707-BE08-B5F9DBCF430F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{436FA483-4F3E-4707-BE08-B5F9DBCF430F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{436FA483-4F3E-4707-BE08-B5F9DBCF430F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{436FA483-4F3E-4707-BE08-B5F9DBCF430F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F509C710-6915-4774-AD70-8564B71298E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F509C710-6915-4774-AD70-8564B71298E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F509C710-6915-4774-AD70-8564B71298E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F509C710-6915-4774-AD70-8564B71298E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
