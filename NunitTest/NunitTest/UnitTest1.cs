@@ -24,7 +24,11 @@ namespace NunitTest
         //[TestCase(-3, -6, ExpectedResult = 3)]
         //[TestCase(3, 6, ExpectedResult = 9)]
         [Retry(2)]
-        [Test, Category("UnitTest"), Description("Метод сложения")]
+
+        [Test, Category("UnitTest"), Description("ГЊГҐГІГ®Г¤ Г±Г«Г®Г¦ГҐГ­ГЁГї")]
+
+        [Test, Category("UnitTest1"), Description("ГЊГҐГІГ®Г¤ Г±ГіГ¬Г¬Г»")]
+
         public void SummTest([Values(1, 2)] int x, 
             [Range(10, 20, 2)] int y)
         {

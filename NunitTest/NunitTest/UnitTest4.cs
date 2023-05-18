@@ -24,7 +24,11 @@ namespace NunitTest
         {
             //randomInt = new Random().Next(0, 10);
         }
+
         [Test, Category("UnitTest"), Description("Метод умножения")]
+
+        [Test, Category("UnitTest4"), Description("Метод умножения")]
+
         [TestCase(10, 5, ExpectedResult = 50)]
         [TestCase(-6, 6, ExpectedResult = -1)]
         [TestCase(1, 5, ExpectedResult = 5)]
