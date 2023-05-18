@@ -28,7 +28,6 @@ namespace NunitTest.Calculator
         public void SummTest([Values(1, 1)] int x,
             [Range(10, 20, 2)] int y)
         {
-
             //Action
             var actualResult = calculator.Summ(x, y);
             //Assert
