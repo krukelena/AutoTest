@@ -24,7 +24,7 @@ namespace NunitTest.Calculator
         {
             //randomInt = new Random().Next(0, 10);
         }
-
+        [Test, Category("UnitTest3"), Description("Метод деления")]
         [TestCase(10, 5, ExpectedResult = 2)]
         [TestCase(-6, 6, ExpectedResult = -1)]
         [TestCase(15, 5, ExpectedResult = 3)]
