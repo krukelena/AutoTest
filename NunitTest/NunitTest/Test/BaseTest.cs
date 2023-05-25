@@ -1,4 +1,5 @@
 ﻿using Core.Selenium;
+using NUnit.Allure.Core;
 using NunitTest.Page;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace NunitTest.Test.SwagLabs
 {
+    [AllureNUnit]
     public class BaseTest
     {
         protected IBrowser? _browser;
