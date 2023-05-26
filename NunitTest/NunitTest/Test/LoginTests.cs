@@ -1,5 +1,7 @@
-﻿using Core.Models;
+﻿using Allure.Commons;
+using Core.Models;
 using Core.Models.Builders;
+using NUnit.Allure.Attributes;
 using NunitTest.Page;
 using NunitTest.Test.SwagLabs;
 using OpenQA.Selenium;
@@ -14,9 +16,16 @@ namespace NNunitTest.Test.SwagLabs
     [TestFixture]
     internal class LoginTests : BaseTest
     {
-       
-        [Test, Category("Positive")]
-        public void Test()
+        [Test(Description= "Успешный логин")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("User1")]
+        [AllureSuite("PassedSuite")]
+        [AllureIssue(name:"ID")]
+        [AllureTag("Smoke")]
+        [Description("Подробное описание теста")]
+      
+        [Category("Pasitive")]
+        public void SuccessfullyLogIn()
         {
             _loginPage
                 .SuccessfullyLogIn(new User {
@@ -28,13 +37,21 @@ namespace NNunitTest.Test.SwagLabs
             Thread.Sleep(2000);
         }
 
-        [Test, Category("Negative")]
+        [Test(Description = "Неверный пароль")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("User2")]
+        [AllureSuite("PassedSuite")]
+        [AllureIssue(name: "ID2")]
+        [AllureTag("Smoke")]
+        [Description("Подробное описание теста")]
+        
+        [Category("Negative")]
         public void Test_ErrorMessage()
         {
             _loginPage
                 .IncorrrectLogIn(new User {
                     Username = "standard",
-                    Password = "secret_sauce"
+                    Password = "secret_"
                 });
 
             Assert.That(
@@ -43,7 +60,15 @@ namespace NNunitTest.Test.SwagLabs
             );
         }
 
-        [Test]
+        [Test(Description = "Переход на страницу")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("User2")]
+        [AllureSuite("PassedSuite")]
+        [AllureIssue(name: "ID2")]
+        [AllureTag("Smoke")]
+        [Description("Подробное описание теста")]
+        
+        [Category("Negative")]
         public void Test1()
         {
             if(!_loginPage.IsPageOpened())
