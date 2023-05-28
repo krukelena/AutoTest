@@ -3,18 +3,22 @@ using Core.Selenium;
 using Core.Wrappers;
 using OpenQA.Selenium.Support.UI;
 using Core.Models;
+using NLog;
 
 namespace NunitTest.Page
 {
     public class LoginPage : BasePage
     {
+
+        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
+
         private static readonly By UserNameInputLocator = By.XPath("//*[@data-test='username']");
         private static readonly By PasswordInputLocator = By.CssSelector("#password");
         private static readonly By LoginButtonLocator = By.Name("login-button");
         private static readonly By ErrorElementLocator = By.XPath("//*[@data-test='error']");
 
 
-        public LoginPage(IBrowser browser) : base(browser) { }
+        public LoginPage(IBrowser browser) : base(browser){}
 
 
         public Input UsernameInputElement
@@ -61,12 +65,15 @@ namespace NunitTest.Page
         {
             LogIn(user);
 
+            _logger.Info("Перехожу со страницы LoginPage на страницу InventoryPage");
+
             return new InventoryPage(_browser);
         }
 
         public LoginPage IncorrrectLogIn(User user)
         {
             LogIn(user);
+
 
             return this;
         }

@@ -22,10 +22,11 @@ namespace NNunitTest.Test.SwagLabs
         [AllureSuite("PassedSuite")]
         [AllureIssue(name:"ID")]
         [AllureTag("Smoke")]
+        [AllureLink("https://www.saucedemo.com/")]
         [Description("Подробное описание теста")]
       
         [Category("Pasitive")]
-        public void SuccessfullyLogIn()
+        public void SuccessLoginTest()
         {
             _loginPage
                 .SuccessfullyLogIn(new User {
@@ -43,6 +44,7 @@ namespace NNunitTest.Test.SwagLabs
         [AllureSuite("PassedSuite")]
         [AllureIssue(name: "ID2")]
         [AllureTag("Smoke")]
+        [AllureLink("https://www.saucedemo.com/")]
         [Description("Подробное описание теста")]
         
         [Category("Negative")]
@@ -62,10 +64,11 @@ namespace NNunitTest.Test.SwagLabs
 
         [Test(Description = "Переход на страницу")]
         [AllureSeverity(SeverityLevel.normal)]
-        [AllureOwner("User2")]
+        [AllureOwner("User1")]
         [AllureSuite("PassedSuite")]
-        [AllureIssue(name: "ID2")]
+        [AllureIssue(name: "ID3")]
         [AllureTag("Smoke")]
+        [AllureLink("https://www.saucedemo.com/")]
         [Description("Подробное описание теста")]
         
         [Category("Negative")]

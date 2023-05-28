@@ -1,5 +1,6 @@
 ﻿using Allure.Commons;
 using Core.Selenium;
+using NLog;
 using NUnit.Allure.Core;
 using NUnit.Framework.Interfaces;
 using NunitTest.Page;
@@ -14,16 +15,24 @@ namespace NunitTest.Test.SwagLabs
 {
     [AllureNUnit]
     public class BaseTest
-    {
+    { 
+        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         private AllureLifecycle _allure;
         protected IBrowser? _browser;
-        
+       
         protected LoginPage _loginPage;
 
 
         [SetUp]
         public void SetUp()
         {
+            _logger.Trace("Сообщение уровня Trace");
+            _logger.Debug("Сообщение уровня Debag");
+            _logger.Info("Сообщение уровня Info");
+            _logger.Warn("Сообщение уровня Warn");
+            _logger.Error("Сообщение уровня Error");
+            _logger.Fatal("Сообщение уровня Fatal");
+
             _browser = new ChromeBrowser();
             _browser.Driver?.Navigate().GoToUrl("https://www.saucedemo.com/");
 
@@ -58,6 +67,5 @@ namespace NunitTest.Test.SwagLabs
 
             _browser?.Driver?.Close();
         }
-
     }
 }

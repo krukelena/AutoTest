@@ -1,5 +1,6 @@
 ﻿using Core.Selenium;
 using Core.Wrappers;
+using NLog;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,8 @@ namespace NunitTest.Page
 {
     public class InventoryPage : BasePage
     {
+        //private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
+
         private static readonly By CartIconLocator = By.ClassName("shopping_cart_link");
         private static readonly By FilterDropdownLocator = By.ClassName("product_sort_container");
         private static readonly By MenuButtonLocator = By.Id("react-burger-menu-btn");
